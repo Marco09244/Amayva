@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Productos - Amayva</title>
+    <link rel="stylesheet" href="pagina.css">
+</head>
+<body>
+    
+    <header class="navbar">
+        <a href="index.html" class="logo"><img src=""></a>
+        <nav>
+            <ul>
+                <li><a href="pagina.html">Inicio</a></li>
+                <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+
+    
+    <section id="catalogo">
+        <h1>Catálogo de Productos</h1>
+
+        
+        <div class="categoria">
+            <h2>Sábanas</h2>
+            <div class="catalogo-grid">
+                
+                <div class="producto">
+                    <img src="Imagenes/Imagenes productos/sabanas/3.jpg" alt="Sábana 1">
+                    <p>Sábana de Algodón 200 Hilos</p>
+                </div>
+                
+                <div class="producto">
+                    <img src="Imagenes/Imagenes productos/sabanas/sabanas1.jpg" alt="Sábana 2">
+                    <p>Sábana Microfibra Suave</p>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="categoria">
+            <h2>Acolchados</h2>
+            <div class="catalogo-grid">
+                <div class="producto">
+                    <img src="Imagenes/Imagenes productos/acolchado/11.jpg" alt="Acolchado 1">
+                    <p>Acolchado Premium</p>
+                </div>
+             
+            </div>
+        </div>
+
+        
+        <div class="categoria">
+            <h2>Covers</h2>
+            <div class="catalogo-grid">
+                <div class="producto">
+                    <img src="Imagenes/Imagenes productos/cover/13.jpg" alt="Producto 1">
+                    <p>Toalla de Baño Grande</p>
+                </div>
+         
+            </div>
+        </div>
+       
+    </section>
+    
+    <script>
+        
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        
+        let slideIndex = 0;
+
+        function moveSlide(n) {
+            slideIndex += n;
+            showSlide(slideIndex);
+        }
+
+        function showSlide(n) {
+            const slides = document.querySelectorAll('.carousel-images img');
+            if (n >= slides.length) { slideIndex = 0; }
+            if (n < 0) { slideIndex = slides.length - 1; }
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slides[slideIndex].style.display = "block";  
+        }
+
+        
+        showSlide(slideIndex);
+    </script>
+</body>
+</html>

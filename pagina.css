@@ -1,0 +1,286 @@
+@font-face {
+  font-family: 'Wallington';
+  src: url('Wallington-Pro.ttf') format('truetype'); 
+}
+.navbar {
+  transition: all 0.3s ease; 
+}
+
+.navbar.scrolled {
+  padding: 10px 0; 
+}
+
+.navbar ul li a {
+  font-size: 22px; 
+  transition: font-size 0.3s ease; 
+}
+
+.navbar.scrolled ul li a {
+  font-size: 18px; 
+}
+
+body {
+  font-family: 'Wallington', cursive;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1, p, a {
+  font-family: 'Wallington', cursive; 
+}
+
+h1 {
+  text-align: center;
+  margin-top: 50px;
+  color: black; 
+}
+
+
+.navbar {
+  background-color: #e6c47a; 
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 20px 0; 
+  image-rendering: auto;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.navbar ul li {
+  display: inline;
+  padding: 10px 20px;
+}
+
+.navbar ul li a {
+  color: white; 
+  text-decoration: none;
+  font-size: 22px; 
+  padding: 14px 20px;
+  display: inline-block;
+  transition: font-size 0.3s ease; 
+}
+
+.navbar ul li a:hover {
+  background-color: #d6b46a; 
+  border-radius: 5px;
+}
+
+
+
+#que-es-amayva {
+  background-color: #27335e; 
+  color: white; 
+  width: auto;
+  padding: 30px;
+  padding-bottom: 30px;
+}
+
+.titulo-amayva {
+  color: white; 
+}
+
+#que-tenemos {
+  background-color: #ffffff; 
+  color: black; 
+}
+
+#que-tenemos h1 {
+  color: black; 
+}
+
+#sobre-nosotros {
+  background-color: #cccccc;
+}
+
+#sobre-nosotros h1 {
+  color: black; 
+}
+
+#contacto {
+  background-color: #b3b3b3;
+}
+
+
+section:target {
+  padding-top: 60px; 
+}
+
+
+.logo-container {
+  text-align: center;
+  margin-top: 60px; 
+}
+
+.logo {
+  width: 100%; 
+  height: auto; 
+}
+
+
+.carousel {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.carousel-images {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel img {
+  width: 500px;
+  height: 500px;
+  display: block;
+  margin: 0 auto; 
+}
+
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 16px;
+  font-size: 18px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+#sobre-nosotros {
+  background-color: #cccccc;
+  padding: 50px 20px; 
+  min-height: 30vh; 
+}
+
+#sobre-nosotros h1 {
+  color: black;
+  margin-bottom: 10px; 
+}
+.sobre-nosotros {
+  width: 80%; 
+  margin: 30px; 
+  text-align: justify; 
+  padding: 20px; 
+  background-color: #f9f9f9; 
+  border-radius: 30px; 
+}
+
+
+#contacto {
+  background-color: #e6c47a;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 10px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+#contacto {
+  background-color: #e6c47a;
+  padding: 15px 0;
+  margin-top: 10px;
+  min-height: 20vh;
+}
+#contacto {
+  background-color: #e6c47a;
+}
+#contacto h1 {
+  margin-bottom: 10px; 
+}
+
+#contacto p {
+  margin: 10px ; 
+}
+#catalogo {
+  background-color: #ffffff; 
+  color: black; 
+  padding: 50px 20px; 
+  text-align: center;
+}
+
+#catalogo h1 {
+  color: black;
+  margin-bottom: 20px; 
+}
+
+
+.catalogo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px; 
+  justify-items: center; 
+}
+
+.catalogo-grid img {
+  width: 100%; 
+  max-width: 300px; 
+  height: auto; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+#contacto{
+  font-family: Arial, sans-serif;
+}
+
+#contacto {
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.contact-icon {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #555;
+  font-size: 16px;
+}
+
+.contact-icon img {
+  width: 30px;
+  height: 30px;
+  
+  margin-right: 10px;
+  transition: transform 0.2s ease;
+}
+.whatsapp-icon {
+  border-radius: 50%; 
+}
+
+.contact-icon:hover img {
+  transform: scale(1.1);
+}
+
+.contact-icon:hover {
+  color: #000; 
+}

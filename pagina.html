@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barra de Navegación</title>
+    <link rel="stylesheet" href="pagina.css">
+ 
+</head>
+<body>
+    
+    <nav class="navbar">
+        <header>
+            <a href="index.html" class="logo"></a>
+        </header>
+        <ul>
+            <li><a href="pagina2.html">Sobre Nosotros</a></li>
+            <li><a href="#que-es-amayva">¿Qué es Amayva?</a></li>
+            <li><a href="#que-tenemos">¿Qué tenemos?</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="catalogo.html">Catalogo</a></li>
+        </ul>
+    </nav>
+
+    
+    <div class="logo-container">
+        <img src="Imagenes/Imagenes productos/logo/ani logo nombre.jpg" alt="Logo de Amayva" class="logo">
+    </div>
+
+    
+    <section id="que-es-amayva">
+        <div>
+            <h1 class="titulo-amayva">¿Qué es Amayva?</h1>
+            <p>AMAYVA es una empresa que busca integrar el espacio entre los polos de una administración familiar de tinte cooperativo y un modelo de negocio con sistemas y estructuras estandarizadas a nivel Nacional. El eje que nos sintetiza es la búsqueda de la máxima calidad con las formas más simples y accesibles. Creemos que el estímulo de disfrutar cada cosa que hacemos redime al compromiso y convoca la habilidad de responder a cada desafío en su tono justo. ES uno, otro, escenario donde bordar una profunda convicción: Ama y Va.</p>
+            <br>
+            <p>Nos dedicamos a la venta de productos textiles y equipamiento para el hogar.</p>
+            <br>
+            <p>Brindamos una atención personalizada y un modelo de ventas que se acerca hasta donde vos estás y te ofrece diversas formas de acceder a los mejores productos con facilidades, financiamiento y garantía de satisfacción.</p>
+        </div>
+    </section>
+
+    <section id="que-tenemos">
+        <h1>¿Qué tenemos?</h1>
+        <div class="carousel">
+            <div class="carousel-images">
+                <img src="Imagenes/Imagenes productos/conrtinas/CATALOGO MZA p24.jpg" alt="Imagen 1">
+                <img src="Imagenes/Imagenes productos/sabanas/3.jpg" alt="Imagen 2">
+                <img src="Imagenes/Imagenes productos/edredon/6.jpg" alt="Imagen 3">
+                <img src="Imagenes/Imagenes productos/acolchado/ACOLCHADO EVOLUTION.jpg" alt="Imagen 4">
+                <img src="Imagenes/Imagenes productos/cover/COVER QUILT DOS COLORES.jpg" alt="Imagen 5">
+                <img src="Imagenes/Imagenes productos/toallas/19.jpg" alt="Imagen 6">
+            </div>
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+        <div>
+            <section id="catalogo">
+                <h1>Mini Catálogo</h1>
+                <div class="catalogo-grid">
+                    <img src="Imagenes/Imagenes productos/10.jpg" alt="Producto 1">
+                    <img src="Imagenes/Imagenes productos/11.jpg" alt="Producto 2">
+                    <img src="Imagenes/Imagenes productos/3.jpg" alt="Producto 3">
+                    <img src="Imagenes/Imagenes productos/4.jpg" alt="Producto 4">
+                    <img src="Imagenes/Imagenes productos/5.jpg" alt="Producto 5">
+                    <img src="Imagenes/Imagenes productos/6.jpg" alt="Producto 6">
+                    <img src="Imagenes/Imagenes productos/7.jpg" alt="Producto 7">
+                    <img src="Imagenes/Imagenes productos/8.jpg" alt="Producto 8">
+                    <img src="Imagenes/Imagenes productos/9.jpg" alt="Producto 9">
+                </div>
+            
+            </section>
+        </div>
+    </section>
+
+   
+    <section id="contacto">
+        <h1>Contacto</h1>
+        <div class="contact-links">
+            <a href="mailto:royaltexmendoza@amayva.com" class="contact-icon" aria-label="Gmail">
+                <img src="Imagenes/Imagenes productos/contacto/gmail logo.png" alt="Gmail Logo">
+                royaltexmendoza@amayva.com
+            </a>
+            <a href="https://wa.me/5492604654148" class="contact-icon" aria-label="WhatsApp" target="_blank">
+                <img src="Imagenes/Imagenes productos/contacto/ws logo.png" alt="WhatsApp Logo">
+                <h6>+54 9 2604 65-4148</h6>
+            </a>
+        </div>
+    </section>
+    
+    
+
+    <script>
+        
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        
+        let slideIndex = 0;
+
+        function moveSlide(n) {
+            slideIndex += n;
+            showSlide(slideIndex);
+        }
+
+        function showSlide(n) {
+            const slides = document.querySelectorAll('.carousel-images img');
+            if (n >= slides.length) { slideIndex = 0; }
+            if (n < 0) { slideIndex = slides.length - 1; }
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slides[slideIndex].style.display = "block";  
+        }
+
+        
+        showSlide(slideIndex);
+    </script>
+</body>
+</html>
